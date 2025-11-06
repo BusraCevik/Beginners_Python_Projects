@@ -16,4 +16,3 @@ madlib = (f"Computer programming is so {adj}! "
           f"Stay hydrated and {verb2} like you are {famous_person}")
 
 print(madlib)
-

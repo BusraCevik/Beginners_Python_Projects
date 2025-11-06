@@ -5,12 +5,12 @@ Each project helped me improve my understanding of Python fundamentals and probl
 ---
 
 ##  Projects Included
-- Calculator  
+- Madlibs
 - Number Guessing Game 
-- Password Generator   
+- Binary Search
 - Rock Paper Scissors  
-- Quiz App 
-- Todo List  
+- Hangman
+- TicTacToe
 
 ---
 
@@ -28,8 +28,3 @@ Each project helped me improve my understanding of Python fundamentals and probl
 - Git & GitHub  
 
 ---
-
-##  How to Run
-1. Clone this repository:  
-   ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
