@@ -32,7 +32,7 @@ class TicTacToe():
 
     def available_moves(self):
         return [i for i, spot in enumerate(self.board) if spot == ' ']
-
+                #[expression for value in iterate if condition]
     def empty_squares(self):
         return ' ' in self.board
 
@@ -121,7 +121,7 @@ if __name__ == '__main__':
     x_wins = 0
     o_wins = 0
     ties = 0
-    for _ in range(1000):
+    for _ in range(25):
         x_player = RandomComputerPlayer('X')
         o_player = GeniusComputerPlayer('O')
         t = TicTacToe()
