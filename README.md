@@ -11,6 +11,8 @@ Each project helped me improve my understanding of Python fundamentals and probl
 - Rock Paper Scissors  
 - Hangman
 - TicTacToe + AI
+- Binary Search vs Naive Search
+- Minesweeper
 
 ---
 
