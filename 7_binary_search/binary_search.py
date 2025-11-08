@@ -1,7 +1,6 @@
 import random
-import math
 import time
-from operator import length_hint
+
 
 
 # sorted list is a must
