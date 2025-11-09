@@ -1,8 +1,6 @@
 import random
 import re
 
-from pandas.core.ops.missing import dispatch_fill_zeros
-
 
 #lets create a board object to represent the minesweeper game
 #this is so that we can just say "create a new board object", or
@@ -55,7 +53,7 @@ class Board:
     def assign_values_to_board(self):
     #now that we have the bombs planted, lets assign a number 0-8 for all the empty spaces
     #which represents how many neighboring bombs there are. we can precompute these and
-    #it will save us some effort checkking whats around the board later on
+    #it will save us some effort checking whats around the board later on
 
         for r in range(self.dim_size):
             for c in range(self.dim_size):
@@ -182,18 +180,26 @@ def play(dim_size=10, num_bombs=10):
 
     while len(board.dug) < board.dim_size ** 2 - num_bombs:
         print(board)
-        #0,0 or 0, 0 or 0,    0
-        user_input = re.split(',(\\s)*', input("Where would you like to dig? Input as row,col:  ")) #
-        row, col = int(user_input[0]), int(user_input[-1])
+        # 0,0 or 0, 0 or 0,    0
+        user_input = input("Where would you like to dig? Input as row,col:  ")
+
+        try:
+
+            user_input = re.split(r',\s*', user_input)
+            row, col = int(user_input[0]), int(user_input[1])
+        except (ValueError, IndexError):
+            print("Invalid input format! Please enter as row,col")
+            continue
+
         if row < 0 or row >= board.dim_size or col < 0 or col >= board.dim_size:
             print("Invalid location, Try again.")
             continue
 
-        #if its valid, we dig
+        # if its valid, we dig
         safe = board.dig(row, col)
         if not safe:
-            #dug a bomb and game over
-            break#gameover
+            # dug a bomb and game over
+            break  # gameover
 
     #2 ways to end loop, lets check which one
     if safe:
