@@ -29,5 +29,4 @@ def computer_guess(x):
             low = guess + 1
 
     print(f"computer guessed({guess}) correctly!")
-
-computer_guess(10)
+guess(10)
