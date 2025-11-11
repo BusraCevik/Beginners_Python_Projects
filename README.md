@@ -13,6 +13,10 @@ Each project helped me improve my understanding of Python fundamentals and probl
 - TicTacToe + AI
 - Binary Search vs Naive Search
 - Minesweeper
+- Sudoku
+- Selection-Sort
+- Photoshop
+- Graph Composer
 
 ---
 
